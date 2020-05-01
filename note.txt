@@ -1,0 +1,34 @@
+1. Frequency Table
+    Array/Linkded List
+2. Huffman Table
+    Priority Queue AND a binary tree
+3. Huffman Code Table
+    Array
+
+Example:
+1. Count the occurences of each character in file
+{ ' '=2, 'a'=3, 'b'=3, 'c'=1, 'e'=1}
+
+2. Place characters and counts into Priority Queue
+
+front   1   1   2   3   3   back
+       'c' 'e' ' ' 'b' 'a'
+
+3. Use Priority Queue to create Huffman tree
+
+
+                    10
+                /       \
+            4             6
+          /  \           /   \
+        2     2         3      3
+       ' '  1   1      'b'    'a'
+            c   e
+
+4. Traverse tree to find (char -> binary) map
+
+{' '= 00, 'a'=11,'b'=10,'c'=010,'e'=011}
+
+5. For each char in file, convert to compressed binary version
+a  b  '' a  b  ''  c  a  b   e
+11 10 00 11 10 00 010 11 10 011
