@@ -16,6 +16,7 @@ public class App {
         HuffmanCodes huffmanCodes = new HuffmanCodes(freq, input);
         huffmanCodes.setToQueue();
         huffmanCodes.buildHuffmanTree();
+        huffmanCodes.display();
         huffmanCodes.printHuffmanCode();
         huffmanCodes.printEncryptedString();
     }

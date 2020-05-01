@@ -40,6 +40,7 @@ public class HuffmanCodes {
         Node root = this.pq.peek();
         // Traverse the Huffman tree and store code in a map
         encode(root, "", huffmanCode);
+
     }
 
     /**
@@ -78,6 +79,26 @@ public class HuffmanCodes {
         // recursive the tree
         encode(root.left, str + "0", huffmanCode);
         encode(root.right, str + "1", huffmanCode);
+    }
+
+    /**
+     * 
+     * @param root
+     * @param level
+     */
+    public void displayPreOrder(Node root, int level) {
+
+        if (root != null) {
+            System.out.printf("\t%d: %s\n", level, root.ch);
+            displayPreOrder(root.left, level + 1);
+            displayPreOrder(root.right, level + 1);
+        }
+    }
+
+    public void display() {
+        System.out.println("--- Huffman tree: ");
+        Node root = this.pq.peek();
+        displayPreOrder(root, 0);
     }
 
 }
