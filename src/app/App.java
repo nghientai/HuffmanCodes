@@ -18,7 +18,6 @@ public class App {
         huffmanCodes.buildHuffmanTree();
         huffmanCodes.printHuffmanCode();
         huffmanCodes.printEncryptedString();
-
     }
 
 }
